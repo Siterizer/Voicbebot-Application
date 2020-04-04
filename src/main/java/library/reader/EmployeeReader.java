@@ -1,6 +1,6 @@
-package library.readers;
+package library.reader;
 
-import library.entities.Employee;
+import library.entity.Employee;
 
 import java.util.List;
 

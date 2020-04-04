@@ -1,10 +1,11 @@
-package library.readers;
+package library.reader;
 
-import library.entities.Employee;
+import library.entity.Employee;
 
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
+import java.math.BigDecimal;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;

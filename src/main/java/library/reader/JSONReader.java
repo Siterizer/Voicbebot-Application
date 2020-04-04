@@ -1,9 +1,9 @@
-package library.readers;
+package library.reader;
 
 
 import com.google.gson.Gson;
-import library.entities.Employee;
-import library.entities.Employees;
+import library.entity.Employee;
+import library.entity.Employees;
 
 import java.io.Reader;
 import java.nio.file.Files;
