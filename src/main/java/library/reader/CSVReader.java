@@ -21,13 +21,13 @@ public class CSVReader implements EmployeeReader {
             stream.readLine();//get rid of attribute names
             String line;
             while ((line = stream.readLine()) != null){
-                List<String> nextLine = Arrays.asList(line.split(";"));
-                for (int i = 0; i < nextLine.size(); i++)
+                List<String> attributes = Arrays.asList(line.split(";"));
+                for (int i = 0; i < attributes.size(); i++)
                 {
-                    nextLine.set(i, nextLine.get(i)
+                    attributes.set(i, attributes.get(i)
                             .replaceAll("[ \"]",""));
                 }
-                csvData.add(nextLine);
+                csvData.add(attributes);
             }
         } catch (IOException e) {
             return null;
