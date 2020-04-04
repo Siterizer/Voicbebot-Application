@@ -5,17 +5,15 @@ import lombok.Builder;
 import lombok.Getter;
 import lombok.ToString;
 
-import java.math.BigDecimal;
+import java.util.ArrayList;
+import java.util.List;
+
 
 @Getter
 @AllArgsConstructor
 @Builder
 @ToString
-public class Employee {
+public class Employees {
 
-    private long id;
-    private String name;
-    private String surname;
-    private String job;
-    private String salary;
+    List< Employee > employees = new ArrayList<Employee>();
 }

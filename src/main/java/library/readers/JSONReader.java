@@ -1,13 +1,24 @@
 package library.readers;
 
-import library.entities.Employee;
 
-import java.util.List;
+import com.google.gson.Gson;
+import library.entities.Employees;
+
+import java.io.Reader;
+import java.nio.file.Files;
+import java.nio.file.Paths;
 
 public class JSONReader implements EmployeeReader {
 
     @Override
-    public List<Employee> readEmployee(String url) {
+    public Employees readEmployee(String url) {
+        try {
+            Reader reader = Files.newBufferedReader(Paths.get(url));
+            return new Gson().fromJson(reader, Employees.class);
+
+        } catch (Exception ex) {
+            ex.printStackTrace();
+        }
         return null;
     }
 }

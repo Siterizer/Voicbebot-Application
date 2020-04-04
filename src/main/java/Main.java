@@ -1,12 +1,16 @@
 import library.entities.Employee;
-
-import java.math.BigDecimal;
+import library.entities.Employees;
+import library.readers.JSONReader;
 
 public class Main {
 
     public static void main(String [] args){
-        BigDecimal salary = new BigDecimal("10.0");
-        Employee employee = new Employee(54, "Adam", "Macura", "Muzyk", salary);
-        System.out.println(employee);
+
+        JSONReader jsonReader = new JSONReader();
+        Employees employees = jsonReader.readEmployee("src/main/resources/employees.json");
+        for(Employee employee : employees.getEmployees()){
+            System.out.println(employee);
+        }
+
     }
 }
