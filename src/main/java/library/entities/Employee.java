@@ -13,7 +13,7 @@ import java.math.BigDecimal;
 @ToString
 public class Employee {
 
-    private long id;
+    private Long id;
     private String name;
     private String surname;
     private String job;
