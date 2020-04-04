@@ -12,5 +12,5 @@ import java.util.List;
 @EqualsAndHashCode
 public class Employees {
 
-    List< Employee > employees;
+    List<Employee> employees;
 }
