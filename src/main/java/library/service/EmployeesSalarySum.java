@@ -8,7 +8,7 @@ import java.util.HashMap;
 
 public class EmployeesSalarySum {
 
-    public static HashMap<String, BigDecimal> sumSalaryByJob(Employees employees){
+    public HashMap<String, BigDecimal> sumSalaryByJob(Employees employees){
 
         HashMap<String, BigDecimal> map = new HashMap<>();
 

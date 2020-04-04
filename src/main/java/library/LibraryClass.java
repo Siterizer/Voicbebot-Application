@@ -11,6 +11,12 @@ import java.util.HashMap;
 
 public class LibraryClass {
 
+    private EmployeesSalarySum calculate;
+
+    public LibraryClass(){
+        calculate = new EmployeesSalarySum();
+    }
+
     public HashMap<String, BigDecimal> calculateSalaryFromPath(String path){
 
         IEmployeesReader reader;
@@ -21,6 +27,6 @@ public class LibraryClass {
         } else {
             return null;
         }
-        return EmployeesSalarySum.sumSalaryByJob(reader.readEmployee(path));
+        return calculate.sumSalaryByJob(reader.readEmployee(path));
     }
 }
