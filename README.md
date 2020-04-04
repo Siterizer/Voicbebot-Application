@@ -9,3 +9,7 @@ The library reads Employees from file and perform following task:
 ##
 The main class is called LibraryClass and is located in /src/main/java/library/
 * [LibraryClass](https://github.com/Siterizer/Voicbebot-Application/blob/master/src/main/java/library/LibraryClass.java)
+##
+Example of how to check library working
+* "LibraryClass library = new LibraryClass();"
+* "System.out.println(library.calculateSalaryFromPath("your file path"));"
