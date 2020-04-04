@@ -67,4 +67,20 @@ public class EmployeesSalarySumTest {
         list.add(new Employee(Long.parseLong("1"), "1", "1", "Job", "25000000"));
         assertEquals("27500000", EmployeesSalarySum.sumSalaryByJob(employees).get("Job").toString());
     }
+
+    @Test
+    public void testCommaSalary() {
+        List<Employee> list = employees.getEmployees();
+        list.add(new Employee(Long.parseLong("1"), "1", "1", "Job", "250,12"));
+        list.add(new Employee(Long.parseLong("1"), "1", "1", "Job", "250,12"));
+        assertEquals("500.24", EmployeesSalarySum.sumSalaryByJob(employees).get("Job").toString());
+    }
+
+    @Test
+    public void testCommaAndDotSalary() {
+        List<Employee> list = employees.getEmployees();
+        list.add(new Employee(Long.parseLong("1"), "1", "1", "Job", "250.12"));
+        list.add(new Employee(Long.parseLong("1"), "1", "1", "Job", "250,12"));
+        assertEquals("500.24", EmployeesSalarySum.sumSalaryByJob(employees).get("Job").toString());
+    }
 }
