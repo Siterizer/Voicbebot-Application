@@ -1,11 +1,11 @@
 package library.reader;
 
 import library.entity.Employee;
+import library.entity.Employees;
 
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
-import java.math.BigDecimal;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
@@ -14,7 +14,7 @@ import java.util.List;
 public class CSVReader implements EmployeeReader {
 
     @Override
-    public List<Employee> readEmployee(String url) {
+    public Employees readEmployee(String url) {
         String line;
         BufferedReader stream;
         List<List<String>> csvData = new ArrayList<>();
@@ -39,6 +39,7 @@ public class CSVReader implements EmployeeReader {
                     .build()
             );
         }
-        return employees;
+
+        return new Employees(employees);
     }
 }

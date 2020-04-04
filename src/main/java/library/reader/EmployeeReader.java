@@ -1,11 +1,9 @@
 package library.reader;
 
-import library.entity.Employee;
-
-import java.util.List;
+import library.entity.Employees;
 
 
 public interface EmployeeReader {
 
-    public List<Employee> readEmployee(String url);
+    public Employees readEmployee(String url);
 }

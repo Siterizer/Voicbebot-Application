@@ -1,18 +1,18 @@
 package library.service;
 
 import library.entity.Employee;
+import library.entity.Employees;
 
 import java.math.BigDecimal;
 import java.util.HashMap;
-import java.util.List;
 
 public class EmployeesSalarySum {
 
-    public static HashMap<String, BigDecimal> sumSalaryByJob(List<Employee> employeeList){
+    public static HashMap<String, BigDecimal> sumSalaryByJob(Employees employees){
 
         HashMap<String, BigDecimal> map = new HashMap<>();
 
-        for(Employee employee : employeeList){
+        for(Employee employee : employees.getEmployees()){
             String key = employee.getJob();
             BigDecimal value = new BigDecimal(employee.getSalary().replaceAll(",", "."));
 
