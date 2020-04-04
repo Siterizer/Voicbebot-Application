@@ -1,20 +1,13 @@
-import library.entity.Employees;
-import library.reader.CSVReader;
-import library.reader.JSONReader;
-import library.service.EmployeesSalarySum;
+import library.LibraryClass;
 
 
 public class Main {
 
     public static void main(String [] args){
 
-        JSONReader jsonReader = new JSONReader();
-        Employees employees = jsonReader.readEmployee("src/main/resources/employees.json");
+        LibraryClass library = new LibraryClass();
 
-        System.out.println(EmployeesSalarySum.sumSalaryByJob(employees));
-        CSVReader csvReader = new CSVReader();
-        Employees employees2 = csvReader.readEmployee("src/main/resources/employees.csv");
-
-        System.out.println(EmployeesSalarySum.sumSalaryByJob(employees2));
+        System.out.println(library.calculateSalaryFromPath("src/main/resources/employees.json"));
+        System.out.println(library.calculateSalaryFromPath("src/main/resources/employees.csv"));
     }
 }

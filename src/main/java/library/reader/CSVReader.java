@@ -11,13 +11,13 @@ import java.util.Arrays;
 import java.util.List;
 
 
-public class CSVReader implements EmployeeReader {
+public class CSVReader implements IEmployeesReader {
 
     @Override
-    public Employees readEmployee(String url) {
+    public Employees readEmployee(String path) {
         List<List<String>> csvData = new ArrayList<>();
         try {
-            BufferedReader stream = new BufferedReader(new FileReader(url));
+            BufferedReader stream = new BufferedReader(new FileReader(path));
             stream.readLine();//get rid of attribute names
             String line;
             while ((line = stream.readLine()) != null){
